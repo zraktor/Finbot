@@ -35,7 +35,7 @@ svmfit <- readRDS(file = "models/FinbotSVM.rds")
 
 
 #list of feedback responses
-mylist <- c("Answer is unclear", "Answer is not relevant", "Answer has broken a URL", "Answer is not displayed", "Other")
+feedback_choices <- c("Answer is unclear", "Answer is not relevant", "Answer has broken a URL", "Answer is not displayed", "Other")
 
 
 

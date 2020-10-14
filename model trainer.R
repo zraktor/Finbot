@@ -8,6 +8,17 @@ library(tm)
 library(e1071)
 
 
+
+
+
+# Methodology
+# 1. Convert training questions into document term matrix (sparse matrix with 1s and 0s)
+# 2. Match the matrix of each training question with its corresponding answer to form a training matrix
+# 3. Train SVM model with the training matrix
+
+
+
+
 #read in FAQ data
 
 data <- read.csv(file = 'data/faq.csv')
@@ -42,6 +53,6 @@ data_train = cbind(data['Answer'], dataset)
 
 svmfit = svm(factor(Answer) ~., data_train, kernel = "linear", cost = 100, scale = FALSE)
 
-# 4. save model as RDS file
+#save model as RDS file
 
 saveRDS(svmfit, "models/FinbotSVM.rds")

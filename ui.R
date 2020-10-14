@@ -126,21 +126,8 @@ ui <- dashboardPage(title = "Finbot",
                              status = "primary",
                              h3("Response:", align = "center"),
                              p("Sorry that we were not able to answer your question this time. Please email", a(href="mailto:Financial.ASSURANCE@education.gov.uk", "Financial.ASSURANCE@education.gov.uk"), "and we will investigate your question further."))
-                      )),
+                      ))
 
-                fluidRow(
-                  box(width = 12, id = "History",  
-                      status = "primary",
-                      h3("History:", align = "center"),
-                     
 
-                      
-                      
-                      
-                      
-                      
-                     
-                
-                      DT::dataTableOutput("Q_A")))
                 ))
 )
